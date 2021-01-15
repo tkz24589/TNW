@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class lazy="false" name="com.vaccum.entity.Product" table="product">
+  <id column="product_id" name="productId">
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="productName" type="java.lang.String">
+   <column name="product_name"/>
+  </property>
+  <property generated="never" lazy="false" name="type" type="java.lang.String">
+   <column name="product_type"/>
+  </property>
+  <property generated="never" lazy="false" name="productDescribe" type="java.lang.String">
+   <column name="product_describe"/>
+  </property>
+  <property generated="never" lazy="false" name="price" type="java.lang.Float">
+   <column name="product_price"/>
+  </property>
+  <property generated="never" lazy="false" name="userId" type="java.lang.Integer">
+   <column name="user_id"/>
+  </property>
+  <property generated="never" lazy="false" name="picUrl" type="java.lang.String">
+   <column name="pic_url"/>
+  </property>
+ </class>
+</hibernate-mapping>

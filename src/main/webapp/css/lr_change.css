@@ -1,0 +1,30 @@
+.lr_mb_pic {
+			 display:inline-block;
+			 margin:auto;
+			 width:40%;
+			 height:90%;
+			 
+		 }
+		 .lr_change_demo{
+			 width:100%;
+			 height:100%;
+		 }
+		 .lr_img_des_pic img{
+			 width:240px;
+			 height:220px;
+		 }
+		 
+		 .lr_mb_pic p{};
+			  
+	      .lr_show_detail{
+             /* font-size: ; */
+		  }
+		  .lr_mid_mes_end{
+		   height:10%;
+		   width:100%;
+		   margin:0;
+		  }
+		  .lr_mid_mes_end p{
+			  font-size:20px;
+			  color:rgb(50,128,252);
+		  }

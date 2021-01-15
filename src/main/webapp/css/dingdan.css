@@ -1,0 +1,83 @@
+
+			.lr_order_style{
+			   width:100%;
+			   height:153px;
+			   /* border:1px solid #550066; */
+			   background-color:rgb(250,250,250);
+			}
+			.lr_order_styles{
+			
+				float:left;
+				/* margin-le: ;ft:2%; */
+			}
+			.lr_allmes_tabel{
+				
+			}
+			.lr_mes{
+				width:40%;
+				height:99%;
+				/* border:2px solid #29822E; */
+			}
+			.lr_seller_mes,.lr_my_mes{
+			    margin-top:1px;
+				height:38%;
+				margin-left:1%;
+				
+			}
+			.lr_seller_mes em{
+				width:80%;
+			    margin-left:1%;
+			}
+			.lr_seller_mes span,.lr_my_mes span{
+			    
+				font-size:14px;
+				color: dimgray;
+				margin-left:1%;
+			}
+			.lr_seller_mes em,
+			.lr_my_mes em{
+				margin-left:6%;
+				font-weight: 900;
+			}
+			.lr_allmes_tabel{
+			
+				margin-left:3%;
+				height:14%;
+			}
+			.lr_allmes_tabel span{
+				/* margin-left:3%; */
+				font-size:16px ;
+				color:#333333;
+				font-weight:bold;
+			}
+			.lr_ors_pic{
+				width:40%;
+				height:99%;
+			
+			}
+			
+			.lr_ors_choice_button{
+				width: 14%;
+				height: 99%;
+				/* border:1px solid #008080; */
+			}
+			.lr_show_mes_pic{
+				display:inline-block;
+				width:34%;
+				height:92%;
+				margin:1% auto;
+				
+			}
+			.lr_show_mes_pic img{
+				/* position: absolute; */
+				width:100%;
+				height:100%;
+				border-radius:6%;
+				box-shadow:3px 3px 3px 3px #C0C0C0;
+			}
+			.lr_show_mes_pic_change{  display:inline-block;width:20%;margin:0 3% 0 3%; }
+			.lr_show_mes_pic_change i{ position: relative; left:0%; }
+	        .lr_ors_choice_button button{ 
+				margin:40% 0 0 15%;
+				background-color:lightsteelblue;
+			}

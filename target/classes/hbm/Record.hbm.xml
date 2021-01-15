@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class lazy="false" name="com.vaccum.entity.Record" table="record">
+  <id column="record_id" name="recordId">
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="buyerId" type="java.lang.Integer">
+   <column name="buyer_id"/>
+  </property>
+  <property generated="never" lazy="false" name="productId" type="java.lang.Integer">
+   <column name="productd_id"/>
+  </property>
+  <property generated="never" lazy="false" name="sellerId" type="java.lang.Integer">
+   <column name="seller_id"/>
+  </property>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class lazy="false" name="com.vaccum.entity.Count" table="user_count">
+  <id column="count_id" name="countId">
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="fund" type="java.lang.Float">
+   <column name="count_fund"/>
+  </property>
+  <property generated="never" lazy="false" name="userId" type="java.lang.Integer">
+   <column name="user_id"/>
+  </property>
+ </class>
+</hibernate-mapping>

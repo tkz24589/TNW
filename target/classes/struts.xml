@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        
+<struts>
+    <constant name="struts.objectFactory" value="spring"/> 
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <!-- 默认访问页面 -->
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="default" />
+        <action name="default">
+            <result>page/login.jsp</result>
+        </action>
+    </package>
+    <!-- Struts2在2.5版本后添加strict-method-invocation(严格方法访问)，默认为true，不能使用动态方法调用功能，故需设为false -->
+    <package name="user" extends="struts-default,json-default" namespace="/"
+             strict-method-invocation="false" >
+        <action name="*user_*" class="userAction">
+            <result name="userInfo">page/user/userInfo.jsp</result>
+        </action>
+        <action name="*order_*" class="orderAction">
+             <result name="success" type="json">
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+             </result>
+        </action>
+        <action name="*upload_*" class="userUploadAction">            
+            <!--<interceptor-ref name="basicStack"/>-->            
+            <interceptor-ref name="defaultStack"/>            
+            <interceptor-ref name="fileUpload">                
+                <param name="allowedTypes">image/jpeg,image/jpg,image/gif,image/png</param>            
+            </interceptor-ref>            
+            <result name="success">/page/success.jsp</result>       
+        </action>
+        <action name="*seller_*" class="sellerAction">                     
+            <result name="success">/page/user/requestInfo.jsp</result>            
+            <result name="error">/page/error.jsp</result>        
+        </action>
+        <action name="*buyer_*" class="buyerAction">                     
+            <result name="success" type="json">
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+             </result>        
+        </action>
+        <action name="product_do" class="productAction" method="execute">
+            <!--<interceptor-ref name="basicStack"/>-->            
+            <interceptor-ref name="defaultStack"/>            
+            <interceptor-ref name="fileUpload">                
+                <param name="allowedTypes">image/jpeg,image/jpg,image/gif,image/png</param>            
+            </interceptor-ref>            
+            <result name="success">/page/success.jsp</result>
+        </action>
+        <action name="delete_product" class="productAction" method="delete">
+            <result name="success">/page/success.jsp</result>
+        </action>
+        <action name="*login_*" class="loginAction">
+            <result name="user">index.jsp</result>
+            <result name="manage">manage/manage.jsp</result>
+            <result name="logistics">logistics/logistics.jsp</result>
+            <result name="none">erro.jsp</result>
+            <result name="erro">erro.jsp</result>
+        </action>
+        <action name="*rigister_*" class="rigisterAction">
+            <result name="user">login.jsp</result>
+            <result name="manage">approve.jsp</result>
+            <result name="logistics">approve.jsp</result>
+            <result name="rigister">rigister.jsp</result>
+            <result name="erro">page/erro.jsp</result>
+        </action>
+        <action name="search_go" class="searchAction">
+            <result name="success" type="json">
+                <param name="noCache">true</param>
+                <param name="contentType">text/html</param>
+            </result>
+        </action>
+    </package>
+</struts>
